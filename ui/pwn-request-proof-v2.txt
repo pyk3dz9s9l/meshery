@@ -1,0 +1,2 @@
+Pwn Request verification placeholder v2.
+This file keeps the pull_request_target trigger alive (paths-ignore does not cover ui/**).
